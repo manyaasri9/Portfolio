@@ -6,8 +6,6 @@
 <title>Manya Asri — Engineering Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-
-
 :root {
   --paper: #f0f4f8;
   --paper2: #e8edf3;
@@ -23,18 +21,14 @@
   --muted: #5a7a96;
   --white: #ffffff;
 }
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-
 body {
   background: var(--paper);
   color: var(--ink);
   font-family: 'Space Grotesk', sans-serif;
   overflow-x: hidden;
 }
-
-/* Blueprint grid background */
 body::before {
   content: '';
   position: fixed; inset: 0; z-index: 0;
@@ -46,309 +40,171 @@ body::before {
   background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
   pointer-events: none;
 }
-
-/* ── NAV ── */
 nav {
   position: fixed; top: 0; width: 100%; z-index: 200;
-  background: var(--ink);
-  padding: 0 48px;
-  height: 52px;
+  background: var(--ink); padding: 0 48px; height: 52px;
   display: flex; align-items: center; justify-content: space-between;
 }
 .nav-logo {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.4rem;
-  letter-spacing: 0.12em;
-  color: var(--white);
+  font-size: 1.4rem; letter-spacing: 0.12em; color: var(--white);
   display: flex; align-items: center; gap: 16px;
 }
 .nav-logo::after {
-  content: 'ENG SCI · SFU';
+  /* content: 'ENG SCI · SFU'; */
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.2em;
-  color: var(--blue3);
-  font-weight: 300;
+  font-size: 0.55rem; letter-spacing: 0.2em; color: var(--blue3); font-weight: 300;
 }
 nav ul { list-style: none; display: flex; gap: 2px; }
 nav ul a {
-  display: block;
-  padding: 0 16px; height: 52px; line-height: 52px;
+  display: block; padding: 0 16px; height: 52px; line-height: 52px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-  text-decoration: none; transition: all 0.2s;
+  color: rgba(255,255,255,0.4); text-decoration: none; transition: all 0.2s;
 }
 nav ul a:hover { color: white; background: rgba(255,255,255,0.06); }
 
-/* ── HERO ── */
 #hero {
-  min-height: 100vh;
-  padding-top: 52px;
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  grid-template-rows: 1fr auto;
+  min-height: 100vh; padding-top: 52px;
+  display: grid; grid-template-columns: 1fr 420px; grid-template-rows: 1fr auto;
   position: relative; overflow: hidden;
 }
-
-/* Big diagonal accent */
 .hero-diagonal {
-  position: absolute;
-  top: 52px; right: 420px; bottom: 0; left: 0;
+  position: absolute; top: 52px; right: 420px; bottom: 0; left: 0;
   background: var(--ink);
-  clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
-  z-index: 0;
+  clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%); z-index: 0;
 }
-
 .hero-main {
   position: relative; z-index: 2;
   padding: 80px 64px 60px;
-  display: flex; flex-direction: column; justify-content: center;
-  color: white;
+  display: flex; flex-direction: column; justify-content: center; color: white;
 }
-
-/* Dimension line decoration */
-.dim-line {
-  display: flex; align-items: center; gap: 10px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.58rem; letter-spacing: 0.2em;
-  color: var(--blue3); text-transform: uppercase;
-  margin-bottom: 32px;
-}
-.dim-line::before, .dim-line::after {
-  content: ''; flex: 1; height: 1px;
-  background: var(--blue3);
-  max-width: 40px;
-}
-
 .hero-name {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(5rem, 10vw, 9rem);
-  line-height: 0.9;
-  letter-spacing: 0.04em;
-  color: white;
-  margin-bottom: 4px;
+  line-height: 0.9; letter-spacing: 0.04em; color: white; margin-bottom: 4px;
 }
 .hero-name .line2 {
-  color: transparent;
-  -webkit-text-stroke: 1.5px rgba(255,255,255,0.4);
-  display: block;
+  color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,0.4); display: block;
 }
-
 .hero-role {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.72rem; letter-spacing: 0.25em;
-  color: var(--blue3); text-transform: uppercase;
-  margin-bottom: 36px; font-weight: 300;
+  font-size: 0.72rem; letter-spacing: 0.25em; color: var(--blue3);
+  text-transform: uppercase; margin-bottom: 36px; font-weight: 300;
 }
-
 .hero-desc {
-  font-size: 1rem; line-height: 1.75;
-  color: rgba(255,255,255,0.65);
-  max-width: 480px; margin-bottom: 48px;
-  font-weight: 300;
+  font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,0.65);
+  max-width: 480px; margin-bottom: 48px; font-weight: 300;
 }
-
-.hero-tags {
-  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px;
-}
+.hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
 .htag {
-  border: 1px solid rgba(255,255,255,0.2);
-  color: rgba(255,255,255,0.7);
-  padding: 6px 14px;
-  font-family: 'IBM Plex Mono', monospace;
+  border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7);
+  padding: 6px 14px; font-family: 'IBM Plex Mono', monospace;
   font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
-  transition: all 0.2s;
 }
-.htag.gold {
-  border-color: var(--accent2);
-  color: var(--accent2);
-  background: rgba(250,140,22,0.08);
-}
-
-.hero-btns { display: flex; gap: 12px; }
+.htag.gold { border-color: var(--accent2); color: var(--accent2); background: rgba(250,140,22,0.08); }
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn-fill {
-  background: var(--accent);
-  color: white;
-  padding: 14px 28px;
+  background: var(--accent); color: white; padding: 14px 28px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
-  text-decoration: none;
-  display: inline-flex; align-items: center; gap: 8px;
-  transition: all 0.2s;
-  border: none;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;
 }
 .btn-fill:hover { background: #b02f0a; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,56,13,0.3); }
 .btn-outline {
   background: transparent; color: rgba(255,255,255,0.6);
-  border: 1px solid rgba(255,255,255,0.25);
-  padding: 14px 24px;
+  border: 1px solid rgba(255,255,255,0.25); padding: 14px 24px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
-  text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
-  transition: all 0.2s;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;
 }
 .btn-outline:hover { border-color: rgba(255,255,255,0.6); color: white; }
-
-/* Hero right panel - schematic card */
 .hero-panel {
-  position: relative; z-index: 2;
-  background: var(--white);
-  border-left: 3px solid var(--blue);
-  display: flex; flex-direction: column;
-  padding: 0;
+  position: relative; z-index: 2; background: var(--white);
+  border-left: 3px solid var(--blue); display: flex; flex-direction: column;
   box-shadow: -8px 0 40px rgba(0,0,0,0.15);
 }
-
 .panel-header {
-  background: var(--blue);
-  color: white; padding: 20px 28px;
+  background: var(--blue); color: white; padding: 20px 28px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
   display: flex; justify-content: space-between; align-items: center;
 }
 .panel-header .stamp {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.2rem; letter-spacing: 0.1em;
-  border: 2px solid rgba(255,255,255,0.4);
-  padding: 2px 10px;
-  color: rgba(255,255,255,0.7);
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 0.1em;
+  border: 2px solid rgba(255,255,255,0.4); padding: 2px 10px; color: rgba(255,255,255,0.7);
 }
-
 .datasheet { padding: 24px 28px; flex: 1; }
-.ds-row {
-  display: flex; padding: 10px 0;
-  border-bottom: 1px solid var(--line2);
-  align-items: flex-start;
-}
+.ds-row { display: flex; padding: 10px 0; border-bottom: 1px solid var(--line2); align-items: flex-start; }
 .ds-key {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--muted); width: 110px; flex-shrink: 0;
-  padding-top: 1px;
+  color: var(--muted); width: 110px; flex-shrink: 0; padding-top: 1px;
 }
-.ds-val {
-  font-size: 0.78rem; color: var(--ink); font-weight: 500; line-height: 1.4;
-}
+.ds-val { font-size: 0.78rem; color: var(--ink); font-weight: 500; line-height: 1.4; }
 .ds-val.blue { color: var(--blue); }
 .ds-val.red { color: var(--accent); font-weight: 600; }
-.ds-val.gold { color: var(--accent2); font-weight: 600; }
-
 .honour-rows { display: flex; flex-direction: column; gap: 4px; }
 .honour-row {
-  background: rgba(250,140,22,0.08);
-  border: 1px solid rgba(250,140,22,0.25);
-  padding: 4px 10px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.58rem; letter-spacing: 0.1em;
-  color: var(--accent2);
+  background: rgba(250,140,22,0.08); border: 1px solid rgba(250,140,22,0.25);
+  padding: 4px 10px; font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.58rem; letter-spacing: 0.1em; color: var(--accent2);
   display: flex; align-items: center; gap: 6px;
 }
 .honour-row::before { content: '★'; font-size: 0.5rem; }
-
-/* Schematic drawing area */
-.schematic-area {
-  padding: 20px 28px; border-top: 1px solid var(--line);
-  background: var(--paper2);
-  position: relative; min-height: 120px;
-}
-.sch-label {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.52rem; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--muted); margin-bottom: 12px;
-}
-.sch-svg { width: 100%; height: 90px; }
-
-/* Hero bottom bar */
 .hero-bottom {
-  grid-column: 1 / -1;
-  background: var(--ink2);
-  display: flex;
-  border-top: 3px solid var(--accent);
-  position: relative; z-index: 2;
+  grid-column: 1 / -1; background: var(--ink2); display: flex;
+  border-top: 3px solid var(--accent); position: relative; z-index: 2;
 }
 .hb-item {
   flex: 1; padding: 18px 32px;
   border-right: 1px solid rgba(255,255,255,0.08);
   display: flex; align-items: center; gap: 16px;
 }
-.hb-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem; color: white; line-height: 1;
+.hb-num { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: white; line-height: 1; }
+.hb-label {
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.55rem;
+  color: rgba(255,255,255,0.4); letter-spacing: 0.12em; text-transform: uppercase;
 }
-.hb-num sup { font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: var(--blue3); }
-.hb-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.55rem; color: rgba(255,255,255,0.4); letter-spacing: 0.12em; text-transform: uppercase; }
 
-/* ── SECTION WRAPPER ── */
 .wrap { max-width: 1240px; margin: 0 auto; padding: 80px 48px; position: relative; z-index: 1; }
-
-/* Section header - technical drawing style */
-.sh {
-  display: flex; align-items: center; gap: 20px;
-  margin-bottom: 52px;
-  position: relative;
-}
+.sh { display: flex; align-items: center; gap: 20px; margin-bottom: 52px; }
 .sh-num {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.6rem; letter-spacing: 0.2em;
-  color: var(--blue3); text-transform: uppercase;
-  background: var(--ink);
-  color: white; padding: 4px 10px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em;
+  background: var(--ink); color: white; padding: 4px 10px;
 }
 .sh-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-  letter-spacing: 0.08em;
-  color: var(--ink);
+  font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 3vw, 2.8rem);
+  letter-spacing: 0.08em; color: var(--ink);
 }
 .sh-line { flex: 1; height: 1px; background: var(--line); position: relative; }
 .sh-line::before {
-  content: '';
-  position: absolute; right: 0; top: -4px;
-  width: 9px; height: 9px;
-  border: 2px solid var(--blue);
-  background: var(--paper);
-  transform: rotate(45deg);
+  content: ''; position: absolute; right: 0; top: -4px; width: 9px; height: 9px;
+  border: 2px solid var(--blue); background: var(--paper); transform: rotate(45deg);
 }
 
-/* ── SKILLS ── */
 .skills-layout { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3px; }
 .skill-block {
-  background: white;
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--blue);
-  padding: 28px 32px;
-  position: relative; overflow: hidden;
-  transition: all 0.3s;
+  background: white; border: 1px solid var(--line); border-left: 3px solid var(--blue);
+  padding: 28px 32px; position: relative; overflow: hidden; transition: all 0.3s;
 }
 .skill-block::before {
-  content: '';
-  position: absolute; top: 0; right: 0;
-  width: 40px; height: 40px;
-  border-bottom: 1px solid var(--line);
-  border-left: 1px solid var(--line);
-  background: var(--paper2);
+  content: ''; position: absolute; top: 0; right: 0; width: 40px; height: 40px;
+  border-bottom: 1px solid var(--line); border-left: 1px solid var(--line); background: var(--paper2);
 }
 .skill-block:hover { border-left-color: var(--accent); transform: translateX(2px); box-shadow: 4px 0 20px rgba(0,0,0,0.06); }
 .sk-label {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--blue); margin-bottom: 18px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 18px;
   display: flex; align-items: center; gap: 8px;
 }
 .sk-label::before { content: '—'; color: var(--accent); }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .tag {
-  background: var(--paper2);
-  border: 1px solid var(--line);
-  padding: 5px 12px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.6rem; letter-spacing: 0.04em;
-  color: var(--ink2); transition: all 0.2s;
+  background: var(--paper2); border: 1px solid var(--line); padding: 5px 12px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; letter-spacing: 0.04em; color: var(--ink2);
 }
-.skill-block:hover .tag { background: white; border-color: rgba(26,75,140,0.3); }
 
-/* ── EXPERIENCE ── */
 .exp-list { display: flex; flex-direction: column; gap: 3px; }
 .exp-item {
   background: white; border: 1px solid var(--line);
@@ -356,23 +212,16 @@ nav ul a:hover { color: white; background: rgba(255,255,255,0.06); }
   transition: all 0.3s; position: relative;
 }
 .exp-item::after {
-  content: '';
-  position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
   background: transparent; transition: background 0.3s;
 }
 .exp-item:hover::after { background: var(--accent); }
 .exp-item:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
 .exp-side {
-  background: var(--paper2);
-  border-right: 1px solid var(--line);
-  padding: 28px 24px;
-  display: flex; flex-direction: column; gap: 12px;
+  background: var(--paper2); border-right: 1px solid var(--line);
+  padding: 28px 24px; display: flex; flex-direction: column; gap: 12px;
 }
-.exp-date {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.6rem; letter-spacing: 0.1em;
-  color: var(--blue); line-height: 1.5;
-}
+.exp-date { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; color: var(--blue); line-height: 1.5; }
 .exp-badge {
   display: inline-block; font-family: 'IBM Plex Mono', monospace;
   font-size: 0.52rem; letter-spacing: 0.15em; text-transform: uppercase;
@@ -382,241 +231,157 @@ nav ul a:hover { color: white; background: rgba(255,255,255,0.06); }
 .exp-badge.c { border-color: var(--accent); color: var(--accent); background: rgba(212,56,13,0.06); }
 .exp-badge.l { border-color: var(--accent2); color: var(--accent2); background: rgba(250,140,22,0.06); }
 .exp-body { padding: 28px 36px; }
-.exp-role {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700; font-size: 1.15rem;
-  color: var(--ink); margin-bottom: 4px;
-}
+.exp-role { font-weight: 700; font-size: 1.15rem; color: var(--ink); margin-bottom: 4px; }
 .exp-org { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: var(--blue); letter-spacing: 0.08em; margin-bottom: 18px; }
 .exp-pts { list-style: none; }
-.exp-pts li {
-  font-size: 0.88rem; color: #4a6070; line-height: 1.75;
-  padding-left: 18px; position: relative; margin-bottom: 5px;
-}
+.exp-pts li { font-size: 0.88rem; color: #4a6070; line-height: 1.75; padding-left: 18px; position: relative; margin-bottom: 5px; }
 .exp-pts li::before { content: '↳'; position: absolute; left: 0; color: var(--accent); font-size: 0.8rem; }
 
-/* ── PROJECTS ── */
 .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
-@media(max-width: 900px) { .proj-grid { grid-template-columns: 1fr; } }
+.proj-card.featured { grid-column: span 3; }
+.proj-card.featured .proj-content { flex-direction: row; gap: 32px; align-items: flex-start; }
+.proj-card.featured .proj-desc { margin-bottom: 0; }
+.proj-card.featured .proj-name { font-size: 2rem; }
+.proj-card.award-badge::before {
+  content: '★ PEOPLE\'S CHOICE — FAS 2026';
+  display: block; background: var(--accent2); color: white;
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.55rem; letter-spacing: 0.2em;
+  padding: 6px 16px; text-align: center;
+}
+@media(max-width: 900px) { .proj-card.featured { grid-column: span 1; } .proj-card.featured .proj-content { flex-direction: column; } }
 .proj-card {
   background: white; border: 1px solid var(--line);
-  display: flex; flex-direction: column;
-  transition: all 0.3s; position: relative; overflow: hidden;
+  display: flex; flex-direction: column; transition: all 0.3s; overflow: hidden;
 }
 .proj-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.1); transform: translateY(-3px); }
-.proj-top {
-  height: 8px;
-  background: linear-gradient(to right, var(--blue), var(--blue2), var(--blue3));
-}
+.proj-top { height: 8px; background: linear-gradient(to right, var(--blue), var(--blue2), var(--blue3)); }
 .proj-content { padding: 28px; flex: 1; display: flex; flex-direction: column; }
-.proj-meta {
-  display: flex; justify-content: space-between; align-items: center;
-  margin-bottom: 16px;
-}
+.proj-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
 .proj-id { font-family: 'IBM Plex Mono', monospace; font-size: 0.55rem; color: var(--muted); letter-spacing: 0.2em; }
 .proj-event {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.52rem; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--accent); border: 1px solid rgba(212,56,13,0.25);
-  padding: 3px 8px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.52rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent); border: 1px solid rgba(212,56,13,0.25); padding: 3px 8px;
 }
-.proj-name {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.5rem; letter-spacing: 0.06em;
-  color: var(--ink); margin-bottom: 12px;
-}
-.proj-desc { font-size: 0.82rem; color: #5a7a96; line-height: 1.75; flex: 1; margin-bottom: 20px; font-weight: 400; }
+.proj-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.06em; color: var(--ink); margin-bottom: 12px; }
+.proj-desc { font-size: 0.82rem; color: #5a7a96; line-height: 1.75; flex: 1; margin-bottom: 20px; }
 .proj-tags { display: flex; flex-wrap: wrap; gap: 5px; }
 .ptag {
-  background: rgba(26,75,140,0.06); border: 1px solid rgba(26,75,140,0.15);
-  color: var(--blue2); font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.55rem; letter-spacing: 0.08em; padding: 3px 8px;
+  background: rgba(26,75,140,0.06); border: 1px solid rgba(26,75,140,0.15); color: var(--blue2);
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.55rem; letter-spacing: 0.08em; padding: 3px 8px;
 }
-
-/* ── COURSES ── */
-.courses-tabs {
-  display: flex; flex-wrap: wrap; gap: 2px;
-  margin-bottom: 3px;
-}
-.ctab {
-  background: white; border: 1px solid var(--line);
-  padding: 8px 18px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
-  cursor: pointer; color: var(--muted); transition: all 0.2s;
-}
-.ctab.active, .ctab:hover { background: var(--blue); color: white; border-color: var(--blue); }
 
 .courses-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 3px; }
-.course-card {
-  background: white; border: 1px solid var(--line);
-  padding: 22px 24px; transition: all 0.25s; position: relative;
-}
+.course-card { background: white; border: 1px solid var(--line); padding: 22px 24px; transition: all 0.25s; }
 .course-card:hover { border-color: var(--blue3); background: rgba(91,155,213,0.04); }
-.c-code {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.62rem; letter-spacing: 0.2em; color: var(--blue);
-  margin-bottom: 8px; font-weight: 500;
-}
-.c-name {
-  font-weight: 600; font-size: 0.88rem; color: var(--ink);
-  line-height: 1.35; margin-bottom: 8px;
-}
+.course-card .c-area[style], .c-area { display: inline-block; margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 0.52rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 8px; border: 1px solid var(--line2); color: var(--accent2); background: rgba(250,140,22,0.06); }
+.c-area:contains("In Progress"), span.c-area { color: var(--accent2); }
+.course-card:has(.c-area) .c-area { color: var(--accent2); background: rgba(250,140,22,0.06); border-color: var(--line2); }
+.c-code { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; letter-spacing: 0.2em; color: var(--blue); margin-bottom: 8px; font-weight: 500; }
+.c-name { font-weight: 600; font-size: 0.88rem; color: var(--ink); line-height: 1.35; margin-bottom: 8px; }
 .c-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
 .c-area {
-  display: inline-block; margin-top: 10px;
-  font-family: 'IBM Plex Mono', monospace;
+  display: inline-block; margin-top: 10px; font-family: 'IBM Plex Mono', monospace;
   font-size: 0.52rem; letter-spacing: 0.15em; text-transform: uppercase;
-  padding: 3px 8px; border: 1px solid var(--line2);
-  color: var(--accent2); background: rgba(250,140,22,0.06);
+  padding: 3px 8px; border: 1px solid var(--line2); color: var(--accent2); background: rgba(250,140,22,0.06);
 }
 
-/* ── LEADERSHIP ── */
 .lead-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3px; }
-@media(max-width:700px) { .lead-grid { grid-template-columns: 1fr; } }
 .lead-card {
   background: white; border: 1px solid var(--line);
   padding: 32px; position: relative; overflow: hidden; transition: all 0.3s;
 }
 .lead-card:hover { border-color: var(--blue3); }
 .lead-card::after {
-  content: '';
-  position: absolute; bottom: 0; right: 0;
-  width: 60px; height: 60px;
+  content: ''; position: absolute; bottom: 0; right: 0; width: 60px; height: 60px;
   background: linear-gradient(135deg, transparent 50%, var(--paper2) 50%);
 }
+
+.ds-photo-wrap {
+  margin: 20px 28px;
+  border: 2px solid var(--line);
+  position: relative;
+}
+.ds-photo {
+  width: 100%; display: block;
+  aspect-ratio: 3/4; object-fit: cover; object-position: top;
+  filter: grayscale(15%);
+}
+.ds-photo-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: var(--ink); color: rgba(255,255,255,0.6);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 6px 10px; text-align: center;
+}
+
+
 .lead-icon-wrap {
-  width: 44px; height: 44px;
-  background: var(--paper2); border: 1px solid var(--line);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.2rem; margin-bottom: 16px;
+  width: 44px; height: 44px; background: var(--paper2); border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 16px;
 }
 .lead-role { font-weight: 700; font-size: 1rem; color: var(--ink); margin-bottom: 4px; }
 .lead-org { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: var(--blue); letter-spacing: 0.06em; margin-bottom: 14px; }
 .lead-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
 
-/* ── EDUCATION ── */
-.edu-block {
-  background: var(--ink);
-  color: white; padding: 52px;
-  position: relative; overflow: hidden;
-  margin-top: 3px;
-}
-.edu-block::before {
-  content: '';
-  position: absolute; top: 0; right: 0;
-  width: 200px; height: 200px;
-  border-left: 1px solid rgba(255,255,255,0.06);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-.edu-block::after {
-  content: 'SFU';
-  position: absolute; right: 52px; bottom: 40px;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 8rem; letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.04); line-height: 1;
-}
-.edu-label {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase;
-  color: var(--blue3); margin-bottom: 16px;
-}
-.edu-degree {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(1.5rem, 3.5vw, 2.8rem);
-  letter-spacing: 0.05em; color: white; margin-bottom: 8px; line-height: 1.1;
-}
-.edu-school {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.7rem; color: rgba(255,255,255,0.4);
-  letter-spacing: 0.12em; margin-bottom: 36px;
-}
-.edu-honours { display: flex; flex-wrap: wrap; gap: 10px; }
-.edu-h {
-  border: 1px solid rgba(250,140,22,0.35);
-  background: rgba(250,140,22,0.08);
-  color: var(--accent2); padding: 8px 18px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.62rem; letter-spacing: 0.1em;
-  display: flex; align-items: center; gap: 8px;
-}
-.edu-h::before { content: '★'; font-size: 0.55rem; }
-
-/* ── CONTACT ── */
-#contact-section {
-  background: var(--ink2);
-  padding: 80px 48px;
-  position: relative; z-index: 1;
-}
+#contact-section { background: var(--ink2); padding: 80px 48px; position: relative; z-index: 1; }
 .contact-inner { max-width: 900px; margin: 0 auto; }
 .c-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 4.5rem);
   letter-spacing: 0.06em; color: white; line-height: 1; margin-bottom: 8px;
 }
-.c-title span {
-  color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,0.3);
-}
+.c-title span { color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,0.3); }
 .c-sub { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-bottom: 48px; line-height: 1.6; font-weight: 300; }
 .c-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 3px; }
 .c-item {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 20px 24px;
-  text-decoration: none; color: rgba(255,255,255,0.6);
-  display: flex; flex-direction: column; gap: 6px;
-  transition: all 0.2s;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+  padding: 20px 24px; text-decoration: none; color: rgba(255,255,255,0.6);
+  display: flex; flex-direction: column; gap: 6px; transition: all 0.2s;
 }
 .c-item:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.25); color: white; }
 .c-item-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue3); }
 .c-item-val { font-size: 0.8rem; font-weight: 500; }
 
-/* ── FOOTER ── */
 footer {
-  background: var(--ink);
-  padding: 20px 48px;
+  background: var(--ink); padding: 20px 48px;
   display: flex; justify-content: space-between; align-items: center;
-  position: relative; z-index: 1;
-  border-top: 2px solid var(--accent);
+  position: relative; z-index: 1; border-top: 2px solid var(--accent);
 }
 footer span { font-family: 'IBM Plex Mono', monospace; font-size: 0.55rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.25); }
 footer a { color: var(--blue3); text-decoration: none; }
 
-/* ── DIVIDER ── */
 .divider {
   height: 1px; position: relative; z-index: 1;
   background: linear-gradient(to right, transparent, var(--line) 20%, var(--line) 80%, transparent);
 }
 
-/* ── ANIMATIONS ── */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .ha { animation: fadeUp 0.7s ease both; }
-.ha:nth-child(1){animation-delay:0.1s}
-.ha:nth-child(2){animation-delay:0.25s}
-.ha:nth-child(3){animation-delay:0.4s}
-.ha:nth-child(4){animation-delay:0.55s}
-.ha:nth-child(5){animation-delay:0.7s}
-.ha:nth-child(6){animation-delay:0.85s}
-
+.ha:nth-child(1){animation-delay:0.1s} .ha:nth-child(2){animation-delay:0.25s}
+.ha:nth-child(3){animation-delay:0.4s} .ha:nth-child(4){animation-delay:0.55s}
+.ha:nth-child(5){animation-delay:0.7s} .ha:nth-child(6){animation-delay:0.85s}
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.on { opacity: 1; transform: translateY(0); }
+/* Fallback: show everything after 2s in case observer doesn't fire */
+@keyframes forceShow { to { opacity: 1; transform: translateY(0); } }
+.reveal { animation: forceShow 0s 2s forwards; }
 
-/* ── RESPONSIVE ── */
 @media(max-width: 1000px) {
   #hero { grid-template-columns: 1fr; grid-template-rows: auto auto auto; }
   .hero-diagonal { right: 0; clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
   .hero-panel { border-left: none; border-top: 3px solid var(--blue); }
   .skills-layout { grid-template-columns: 1fr; }
   .exp-item { grid-template-columns: 1fr; }
-  .exp-side { border-right: none; border-bottom: 1px solid var(--line); flex-direction: row; flex-wrap: wrap; gap: 10px; }
+  .exp-side { border-right: none; border-bottom: 1px solid var(--line); flex-direction: row; flex-wrap: wrap; }
   nav ul li:nth-child(n+4) { display: none; }
 }
+@media(max-width: 900px) { .proj-grid { grid-template-columns: 1fr; } }
+@media(max-width: 700px) { .lead-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo">MANYA ASRI</div>
+  <!-- <div class="nav-logo">MANYA ASRI</div> -->
   <ul>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -626,12 +391,9 @@ footer a { color: var(--blue3); text-decoration: none; }
   </ul>
 </nav>
 
-<!-- HERO -->
 <div id="hero">
   <div class="hero-diagonal"></div>
-
   <div class="hero-main">
-    <!-- <div class="dim-line ha">REV 2026 · PORTFOLIO SPEC SHEET</div> -->
     <div class="hero-name ha">MANYA<span class="line2">ASRI</span></div>
     <div class="hero-role ha">Engineering Science · Simon Fraser University</div>
     <p class="hero-desc ha">Building systems where software meets hardware — from autonomous robot navigation algorithms and PCB validation to full-stack web platforms and Android applications.</p>
@@ -643,24 +405,20 @@ footer a { color: var(--blue3); text-decoration: none; }
       <span class="htag gold">★ Dean's Honour Roll ×4</span>
     </div>
     <div class="hero-btns ha">
-      <a href="mailto:maa222@sfu.ca" class="btn-fill">Get In Touch →</a>
-      <a href="https://github.com/manyaasri" target="_blank" class="btn-outline">GitHub ↗</a>
+      <a href="mailto:manyaasri9@gmail.com" class="btn-fill">Get In Touch →</a>
+      <a href="https://github.com/manyaasri9" target="_blank" class="btn-outline">GitHub ↗</a>
       <a href="https://www.linkedin.com/in/manya-asri-51bb8628b/" target="_blank" class="btn-outline">LinkedIn ↗</a>
     </div>
   </div>
-
   <div class="hero-panel">
-    <div class="panel-header">
-      <span>DATASHEET</span>
-      <span class="stamp">SFU</span>
-    </div>
+    <div class="panel-header"><span>DATASHEET</span><span class="stamp">SFU</span></div>
     <div class="datasheet">
       <div class="ds-row"><span class="ds-key">Name</span><span class="ds-val">Manya Asri (She/Her)</span></div>
       <div class="ds-row"><span class="ds-key">Program</span><span class="ds-val blue">Computer Engineering, SFU</span></div>
       <div class="ds-row"><span class="ds-key">Status</span><span class="ds-val red">Active (2023 – Present)</span></div>
-      <div class="ds-row"><span class="ds-key">Email</span><span class="ds-val">maa222@sfu.ca</span></div>
-      <!-- <div class="ds-row"><span class="ds-key">Phone</span><span class="ds-val">604-906-2506</span></div> -->
-      <div class="ds-row"><span class="ds-key">Academic Performance</span>
+      <div class="ds-row"><span class="ds-key">Email</span><span class="ds-val">manyaasri9@gmail.com</span></div>
+      <div class="ds-row">
+        <span class="ds-key">Honours</span>
         <div class="ds-val">
           <div class="honour-rows">
             <div class="honour-row">Dean's Honour Roll — Summer 2024</div>
@@ -670,64 +428,49 @@ footer a { color: var(--blue3); text-decoration: none; }
           </div>
         </div>
       </div>
+
+      <div class="ds-photo-wrap">
+        <img src="photo.jpg" alt="Manya Asri" class="ds-photo" onerror="this.parentElement.style.display='none'">
+        <div class="ds-photo-label">MANYA ASRI · 2026</div>
+      </div>
+
     </div>
-
-  
   </div>
-
   <div class="hero-bottom">
-    <div class="hb-item"><div class="hb-num"></div><div class="hb-label">Projects Built</div></div>
-    <div class="hb-item"><div class="hb-num"></div><div class="hb-label">Honour Roll</div></div>
-    <div class="hb-item"><div class="hb-num"><div class="hb-label">Courses Completed</div></div>
-    <div class="hb-item"><div class="hb-num"></div><div class="hb-label">Leadership Roles</div></div>
+    <div class="hb-item"><div class="hb-num">8</div><div class="hb-label">Projects Built</div></div>
+    <div class="hb-item"><div class="hb-num">4×</div><div class="hb-label">Honour Roll</div></div>
+    <div class="hb-item"><div class="hb-num">26</div><div class="hb-label">Courses Completed</div></div>
+    <div class="hb-item"><div class="hb-num">5</div><div class="hb-label">Leadership Roles</div></div>
   </div>
 </div>
 
-<!-- SKILLS -->
 <div id="skills" class="wrap">
   <div class="sh reveal"><span class="sh-num">01</span><h2 class="sh-title">Technical Skills</h2><div class="sh-line"></div></div>
   <div class="skills-layout">
     <div class="skill-block reveal">
       <div class="sk-label">Languages</div>
-      <div class="tags">
-        <span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">Python</span>
-        <span class="tag">Java</span><span class="tag">C++</span><span class="tag">C</span>
-        <span class="tag">SQL</span><span class="tag">HTML / CSS</span>
-      </div>
+      <div class="tags"><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">Python</span><span class="tag">Java</span><span class="tag">C++</span><span class="tag">C</span><span class="tag">SQL</span><span class="tag">HTML / CSS</span></div>
     </div>
     <div class="skill-block reveal">
       <div class="sk-label">Frameworks & Libraries</div>
-      <div class="tags">
-        <span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">Express</span>
-        <span class="tag">Firebase</span><span class="tag">Android Studio</span><span class="tag">WebSockets</span>
-      </div>
+      <div class="tags"><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Firebase</span><span class="tag">Android Studio</span><span class="tag">WebSockets</span></div>
     </div>
     <div class="skill-block reveal">
       <div class="sk-label">Tools & Platforms</div>
-      <div class="tags">
-        <span class="tag">Git / GitHub / GitLab</span><span class="tag">AWS</span>
-        <span class="tag">REST APIs</span><span class="tag">WebRTC</span>
-        <span class="tag">npm / Maven</span><span class="tag">VS Code</span><span class="tag">MS Office Suite</span>
-      </div>
+      <div class="tags"><span class="tag">Git / GitHub / GitLab</span><span class="tag">AWS</span><span class="tag">REST APIs</span><span class="tag">WebRTC</span><span class="tag">npm / Maven</span><span class="tag">VS Code</span></div>
     </div>
     <div class="skill-block reveal">
       <div class="sk-label">Concepts</div>
-      <div class="tags">
-        <span class="tag">Full-Stack Development</span><span class="tag">OOD</span>
-        <span class="tag">DSA</span><span class="tag">Agile / CI/CD</span>
-        <span class="tag">Real-Time Systems</span><span class="tag">API Integration</span><span class="tag">Responsive Design</span>
-      </div>
+      <div class="tags"><span class="tag">Full-Stack Development</span><span class="tag">OOD</span><span class="tag">DSA</span><span class="tag">Agile / CI/CD</span><span class="tag">Real-Time Systems</span><span class="tag">API Integration</span></div>
     </div>
   </div>
 </div>
 
 <div class="divider"></div>
 
-<!-- EXPERIENCE -->
 <div id="experience" class="wrap">
   <div class="sh reveal"><span class="sh-num">02</span><h2 class="sh-title">Technical Experience</h2><div class="sh-line"></div></div>
   <div class="exp-list">
-
     <div class="exp-item reveal">
       <div class="exp-side">
         <div class="exp-date">Sept 2025<br>Present</div>
@@ -743,7 +486,6 @@ footer a { color: var(--blue3); text-decoration: none; }
         </ul>
       </div>
     </div>
-
     <div class="exp-item reveal">
       <div class="exp-side">
         <div class="exp-date">Jan 2025<br>May 2025</div>
@@ -760,24 +502,92 @@ footer a { color: var(--blue3); text-decoration: none; }
       </div>
     </div>
 
-
-
+  </div>
+</div>
 
 <div class="divider"></div>
 
-<!-- PROJECTS -->
+<!-- TEACHING & TUTORING -->
+<div id="teaching" class="wrap">
+  <div class="sh reveal"><span class="sh-num">03</span><h2 class="sh-title">Teaching & Tutoring</h2><div class="sh-line"></div></div>
+  <div class="exp-list">
+
+    <div class="exp-item reveal">
+      <div class="exp-side">
+        <div class="exp-date">May 2025<br>Present</div>
+        <span class="exp-badge l">Tutoring</span>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">Tutor</div>
+        <div class="exp-org">Oxford Learning Centres Inc. · Richmond, BC</div>
+        <ul class="exp-pts">
+          <li>Provided individualized academic tutoring to students across subjects in a structured learning centre environment</li>
+          <li>Applied strong communication and management skills to track student progress and adapt teaching strategies</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-side">
+        <div class="exp-date">May 2025<br>Present</div>
+        <span class="exp-badge l">Tutoring</span>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">Peer Tutor — ENSC 252</div>
+        <div class="exp-org">SFU Engineering Science Student Society · Burnaby, BC</div>
+        <ul class="exp-pts">
+          <li>Supporting students in understanding circuit theory and digital logic for ENSC 252</li>
+          <li>Helping students build problem-solving confidence in this foundational engineering science course</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-side">
+        <div class="exp-date">Apr 2024<br>Present</div>
+        <span class="exp-badge l">Teaching</span>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">Physics Teacher</div>
+        <div class="exp-org">Superprof · Self-Employed · Hybrid</div>
+        <ul class="exp-pts">
+          <li>Delivered holistic, interactive physics lessons tailored to each student's learning style and level</li>
+          <li>Developed and shared original educational content to reinforce conceptual understanding</li>
+          <li>Maintained consistent student engagement through personalized, inquiry-based instruction</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-side">
+        <div class="exp-date">Mar 2024<br>Jan 2025</div>
+        <span class="exp-badge l">Teaching</span>
+      </div>
+      <div class="exp-body">
+        <div class="exp-role">Mathematics Instructor</div>
+        <div class="exp-org">Mathnasium · White Rock, BC</div>
+        <ul class="exp-pts">
+          <li>Taught mathematics to primary and secondary school students using Mathnasium's structured curriculum</li>
+          <li>Built student confidence through patient, one-on-one instruction and collaborative problem-solving</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
 <div id="projects" class="wrap">
-  <div class="sh reveal"><span class="sh-num">03</span><h2 class="sh-title">Projects</h2><div class="sh-line"></div></div>
+  <div class="sh reveal"><span class="sh-num">04</span><h2 class="sh-title">Projects</h2><div class="sh-line"></div></div>
   <div class="proj-grid">
     <div class="proj-card reveal">
       <div class="proj-top"></div>
       <div class="proj-content">
         <div class="proj-meta"><span class="proj-id">PROJ / 001</span><span class="proj-event">CMPT 276 · 2025</span></div>
         <div class="proj-name">Zombified Hamlet</div>
-        <p class="proj-desc">Java-based 2D game with multi-panel UI architecture. Systematic refactoring to eliminate code smells, OOP design patterns for modular game state management, and Agile sprints with code reviews. Integrated audio system and comprehensive documentation.</p>
-        <div class="proj-tags">
-          <span class="ptag">Java</span><span class="ptag">OOP</span><span class="ptag">Agile</span><span class="ptag">Design Patterns</span>
-        </div>
+        <p class="proj-desc">Java-based 2D game with multi-panel UI architecture. Systematic refactoring to eliminate code smells, OOP design patterns for modular game state management, and Agile sprints with code reviews.</p>
+        <div class="proj-tags"><span class="ptag">Java</span><span class="ptag">OOP</span><span class="ptag">Agile</span><span class="ptag">Design Patterns</span></div>
       </div>
     </div>
     <div class="proj-card reveal">
@@ -785,10 +595,8 @@ footer a { color: var(--blue3); text-decoration: none; }
       <div class="proj-content">
         <div class="proj-meta"><span class="proj-id">PROJ / 002</span><span class="proj-event">StormHacks 2025</span></div>
         <div class="proj-name">Campus Cravings</div>
-        <p class="proj-desc">Android campus food delivery platform with Java and Firebase for real-time data and authentication. Leaflet API for interactive campus maps with live location tracking. RESTful endpoints for orders, status updates, and payment processing.</p>
-        <div class="proj-tags">
-          <span class="ptag">Java</span><span class="ptag">Android</span><span class="ptag">Firebase</span><span class="ptag">Leaflet API</span>
-        </div>
+        <p class="proj-desc">Android campus food delivery platform with Java and Firebase for real-time data and authentication. Leaflet API for interactive campus maps with live location tracking.</p>
+        <div class="proj-tags"><span class="ptag">Java</span><span class="ptag">Android</span><span class="ptag">Firebase</span><span class="ptag">Leaflet API</span></div>
       </div>
     </div>
     <div class="proj-card reveal">
@@ -796,109 +604,166 @@ footer a { color: var(--blue3); text-decoration: none; }
       <div class="proj-content">
         <div class="proj-meta"><span class="proj-id">PROJ / 003</span><span class="proj-event">Fall Hacks 2025</span></div>
         <div class="proj-name">CalJam</div>
-        <p class="proj-desc">React.js + TypeScript productivity web app integrating Spotify API for activity-based playlist generation. Responsive dashboard with React Router and modern state management, following OOP principles throughout.</p>
-        <div class="proj-tags">
-          <span class="ptag">React.js</span><span class="ptag">TypeScript</span><span class="ptag">Spotify API</span><span class="ptag">React Router</span>
+        <p class="proj-desc">React.js + TypeScript productivity web app integrating Spotify API for activity-based playlist generation. Responsive dashboard with React Router and modern state management.</p>
+        <div class="proj-tags"><span class="ptag">React.js</span><span class="ptag">TypeScript</span><span class="ptag">Spotify API</span><span class="ptag">React Router</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-top"></div>
+      <div class="proj-content">
+        <div class="proj-meta"><span class="proj-id">PROJ / 004</span><span class="proj-event">ENSC 252 · 2025</span></div>
+        <div class="proj-name">FPGA Digital Alarm Clock</div>
+        <p class="proj-desc">Functional alarm clock implemented on an FPGA board using VHDL. Designed a Finite State Machine (FSM) to manage transitions between time-setting and alarm management modes, with accuracy verified through simulation.</p>
+        <div class="proj-tags"><span class="ptag">VHDL</span><span class="ptag">FPGA (DE10)</span><span class="ptag">Quartus II</span><span class="ptag">FSM</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-top"></div>
+      <div class="proj-content">
+        <div class="proj-meta"><span class="proj-id">PROJ / 005</span><span class="proj-event">ENSC 100W · 2023</span></div>
+        <div class="proj-name">Automated Medicine Sorter</div>
+        <p class="proj-desc">Designed and built a medicine organizer that automatically sorts pills into separate containers by day. Created a 3D-printed enclosure and programmed an Arduino to drive the sorting mechanism.</p>
+        <div class="proj-tags"><span class="ptag">Arduino</span><span class="ptag">C++</span><span class="ptag">3D Modelling</span><span class="ptag">Embedded</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-top"></div>
+      <div class="proj-content">
+        <div class="proj-meta"><span class="proj-id">PROJ / 006</span><span class="proj-event">ENSC 254 · 2025</span></div>
+        <div class="proj-name">RISC-V Pipeline Simulator</div>
+        <p class="proj-desc">Developed a cycle-accurate RISC-V CPU simulator in C with cache simulation and hazard mitigation features. Used Valgrind for memory profiling and leak detection throughout development.</p>
+        <div class="proj-tags"><span class="ptag">C</span><span class="ptag">GCC</span><span class="ptag">Valgrind</span><span class="ptag">Computer Architecture</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-top"></div>
+      <div class="proj-content">
+        <div class="proj-meta"><span class="proj-id">PROJ / 007</span><span class="proj-event">ENSC 351 · 2025</span></div>
+        <div class="proj-name">RoadRhythm Car Head Unit</div>
+        <p class="proj-desc">Modular embedded car head unit on BeagleBone-AI with accelerometer and temperature sensors. Implemented a UDP server to stream live sensor data to a custom web dashboard, enabling real-time display of vehicle metrics in the browser. Developed drivers for LCD metadata and joystick controls over SPI and I2C, with separate code modules for input, audio management, and display output.</p>
+        <div class="proj-tags"><span class="ptag">BeagleBone-AI</span><span class="ptag">UDP Server</span><span class="ptag">SPI / I2C</span><span class="ptag">Real-Time Web</span><span class="ptag">C++</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card award-badge featured reveal">
+      <div class="proj-top" style="background: linear-gradient(to right, var(--accent2), var(--accent), #c0392b);"></div>
+      <div class="proj-content">
+        <div style="flex:1">
+          <div class="proj-meta"><span class="proj-id">PROJ / 008</span><span class="proj-event" style="color:var(--accent2);border-color:rgba(250,140,22,0.4);">FAS Competition 2026</span></div>
+          <div class="proj-name">MedDrone Connect</div>
+          <p class="proj-desc">AI-powered medical delivery drone system designed as a K–12 outreach demo for the SFU Faculty of Applied Sciences Competition 2026 — won <strong>People's Choice Award</strong>. Students interact with an Uber-style tablet app to launch autonomous delivery missions (e.g. emergency medicine to flood-hit hospitals or remote communities). The AI brain handles smart route planning, real-time obstacle avoidance, energy optimization, and emergency prioritization — explained accessibly to inspire future engineers.</p>
+        </div>
+        <div style="flex:0 0 200px">
+          <div class="proj-tags" style="flex-direction:column;">
+            <span class="ptag">AI / Autonomous Systems</span>
+            <span class="ptag">Drone Flight Control</span>
+            <span class="ptag">Obstacle Avoidance</span>
+            <span class="ptag">Energy Optimization</span>
+            <span class="ptag">Outreach / Demo</span>
+            <span class="ptag">Multi-disciplinary</span>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 </div>
 
 <div class="divider"></div>
 
-<!-- COURSES -->
 <div id="courses" class="wrap">
-  <div class="sh reveal"><span class="sh-num">04</span><h2 class="sh-title">Coursework</h2><div class="sh-line"></div></div>
+  <div class="sh reveal"><span class="sh-num">05</span><h2 class="sh-title">Coursework</h2><div class="sh-line"></div></div>
   <div class="courses-grid">
-    <div class="course-card reveal"><div class="c-code">ENSC 105W</div><div class="c-name">Process, Form & Convention in Professional Genres</div><div class="c-desc">Technical communication and professional writing for engineers.</div><span class="c-area">Communication</span></div>
-    <div class="course-card reveal"><div class="c-code">ENSC 120</div><div class="c-name">Introduction to Electronics & Computer Engineering</div><div class="c-desc">Foundational electronics, digital logic, and computer engineering.</div><span class="c-area">Hardware</span></div>
-    <div class="course-card reveal"><div class="c-code">ENSC 151</div><div class="c-name">Engineering Programming</div><div class="c-desc">Introductory programming for engineering applications.</div><span class="c-area">Programming</span></div>
+    <!-- 2023 Fall -->
+    <div class="course-card reveal"><div class="c-code">ENSC 100W</div><div class="c-name">Engineering, Science & Society</div><div class="c-desc">Introduction to engineering ethics, societal impact, and technical writing in an engineering context.</div><span class="c-area">Communication</span></div>
+    <div class="course-card reveal"><div class="c-code">ENSC 105W</div><div class="c-name">Process of Professional Writing</div><div class="c-desc">Technical communication and professional writing conventions for engineers.</div><span class="c-area">Communication</span></div>
+    <div class="course-card reveal"><div class="c-code">ENSC 120</div><div class="c-name">Introduction to Instrumentation</div><div class="c-desc">Foundational electronics, signals, and instrumentation for engineering systems.</div><span class="c-area">Hardware</span></div>
+    <div class="course-card reveal"><div class="c-code">ENSC 151</div><div class="c-name">Intro to Software Development for Engineers</div><div class="c-desc">Introductory programming concepts and software development for engineering applications.</div><span class="c-area">Programming</span></div>
+    <div class="course-card reveal"><div class="c-code">MATH 151</div><div class="c-name">Calculus I</div><div class="c-desc">Limits, derivatives, and applications of differential calculus.</div><span class="c-area">Mathematics</span></div>
+    <!-- 2024 Spring -->
+    <div class="course-card reveal"><div class="c-code">ENSC 180</div><div class="c-name">Introduction to Engineering Analysis</div><div class="c-desc">Analytical methods and problem-solving techniques for engineering science.</div><span class="c-area">Engineering</span></div>
+    <div class="course-card reveal"><div class="c-code">MATH 152</div><div class="c-name">Calculus II</div><div class="c-desc">Integration techniques, sequences, series, and introductory multivariable calculus.</div><span class="c-area">Mathematics</span></div>
+    <div class="course-card reveal"><div class="c-code">MATH 232</div><div class="c-name">Applied Linear Algebra</div><div class="c-desc">Vectors, matrices, linear transformations, eigenvalues, and engineering applications.</div><span class="c-area">Mathematics</span></div>
+    <div class="course-card reveal"><div class="c-code">PHYS 120</div><div class="c-name">Mechanics and Modern Physics</div><div class="c-desc">Classical mechanics, waves, relativity, and introductory modern physics.</div><span class="c-area">Physics</span></div>
+    <!-- 2024 Summer -->
+    <div class="course-card reveal"><div class="c-code">CHEM 121</div><div class="c-name">General Chemistry and Lab I</div><div class="c-desc">Atomic structure, bonding, stoichiometry, thermodynamics, and laboratory techniques.</div><span class="c-area">Chemistry</span></div>
+    <div class="course-card reveal"><div class="c-code">ENSC 251</div><div class="c-name">Software Design & Analysis for Engineers</div><div class="c-desc">Object-oriented design, version control, testing methodologies, and collaborative development.</div><span class="c-area">Software</span></div>
+    <div class="course-card reveal"><div class="c-code">MATH 260</div><div class="c-name">Intro to Differential Equations</div><div class="c-desc">First and higher-order ODEs, Laplace transforms, and engineering applications.</div><span class="c-area">Mathematics</span></div>
+    <div class="course-card reveal"><div class="c-code">PHYS 121</div><div class="c-name">Optics, Electricity & Magnetism</div><div class="c-desc">Geometric optics, electrostatics, magnetic fields, and Maxwell's equations.</div><span class="c-area">Physics</span></div>
+    <!-- 2024 Fall -->
+    <div class="course-card reveal"><div class="c-code">ENSC 204</div><div class="c-name">Graphical Communications</div><div class="c-desc">Engineering drawing, CAD, and graphical representation of technical designs.</div><span class="c-area">Design</span></div>
     <div class="course-card reveal"><div class="c-code">ENSC 220</div><div class="c-name">Electric Circuits I</div><div class="c-desc">Circuit analysis, Kirchhoff's laws, network theorems, and transient behavior.</div><span class="c-area">Circuits</span></div>
-    <div class="course-card reveal"><div class="c-code">ENSC 225</div><div class="c-name">Microelectronic Circuits</div><div class="c-desc">Diodes, BJTs, MOSFETs, amplifiers, and analog circuit design.</div><span class="c-area">Electronics</span></div>
-    <div class="course-card reveal"><div class="c-code">ENSC 251</div><div class="c-name">Software Development Methods</div><div class="c-desc">Version control, testing methodologies, and collaborative development.</div><span class="c-area">Software</span></div>
-    <div class="course-card reveal"><div class="c-code">ENSC 252</div><div class="c-name">Practical Digital Logic Design</div><div class="c-desc">Boolean algebra, combinational/sequential circuits, FPGA design.</div><span class="c-area">Digital Logic</span></div>
-    <div class="course-card reveal"><div class="c-code">ENSC 254</div><div class="c-name">Algorithms & Data Structures</div><div class="c-desc">Core algorithms, complexity analysis, and problem-solving strategies.</div><span class="c-area">Algorithms</span></div>
-    <div class="course-card reveal"><div class="c-code">ENSC 305</div><div class="c-name">Technical Entrepreneurship</div><div class="c-desc">Technology commercialization, business models, and startups.</div><span class="c-area">Business</span></div>
-    <div class="course-card reveal"><div class="c-code">ENSC 351</div><div class="c-name">Real-Time & Embedded Systems</div><div class="c-desc">Embedded programming, real-time OS, and hardware-software interfacing.</div><span class="c-area">Embedded</span></div>
-    <div class="course-card reveal"><div class="c-code">ENSC 380</div><div class="c-name">Linear Systems</div><div class="c-desc">Signals, Laplace and Fourier transforms, and system modeling.</div><span class="c-area">Systems</span></div>
-    <div class="course-card reveal"><div class="c-code">CMPT 276</div><div class="c-name">Introduction to Software Engineering</div><div class="c-desc">Agile, design patterns, testing, and project management.</div><span class="c-area">Software Eng</span></div>
-    <div class="course-card reveal"><div class="c-code">MATH 152</div><div class="c-name">Calculus II</div><div class="c-desc">Integration techniques, sequences, series, and multivariable calculus.</div><span class="c-area">Mathematics</span></div>
-    <div class="course-card reveal"><div class="c-code">MATH 232</div><div class="c-name">Applied Linear Algebra</div><div class="c-desc">Vectors, matrices, linear transformations, and eigenvalues.</div><span class="c-area">Mathematics</span></div>
-    <div class="course-card reveal"><div class="c-code">MATH 260</div><div class="c-name">Ordinary Differential Equations</div><div class="c-desc">First and higher-order ODEs and engineering applications.</div><span class="c-area">Mathematics</span></div>
-    <div class="course-card reveal"><div class="c-code">PHYS 141</div><div class="c-name">The How & Why of Physics</div><div class="c-desc">Mechanics, wave motion, thermodynamics, and experimental methods.</div><span class="c-area">Physics</span></div>
-    <div class="course-card reveal"><div class="c-code">PHYS 221</div><div class="c-name">Electricity & Magnetism</div><div class="c-desc">Electrostatics, magnetic fields, Maxwell's equations, and optics.</div><span class="c-area">Physics</span></div>
-    <div class="course-card reveal"><div class="c-code">MSE 110</div><div class="c-name">Foundations of Material Science</div><div class="c-desc">Crystal structures, mechanical properties, and material selection.</div><span class="c-area">Materials</span></div>
+    <div class="course-card reveal"><div class="c-code">ENSC 252</div><div class="c-name">Fundamental Digital Logic & Design</div><div class="c-desc">Boolean algebra, combinational and sequential circuits, and FPGA design.</div><span class="c-area">Digital Logic</span></div>
+    <div class="course-card reveal"><div class="c-code">MATH 251</div><div class="c-name">Calculus III</div><div class="c-desc">Multivariable calculus, partial derivatives, multiple integrals, and vector calculus.</div><span class="c-area">Mathematics</span></div>
+    <!-- 2025 Spring -->
+    <div class="course-card reveal"><div class="c-code">ENSC 195</div><div class="c-name">Industrial Internship I</div><div class="c-desc">Co-op work term — applied engineering in an industry setting.</div><span class="c-area">Co-op</span></div>
+    <!-- 2025 Summer -->
+    <div class="course-card reveal"><div class="c-code">CMPT 225</div><div class="c-name">Data Structures & Programming</div><div class="c-desc">Lists, stacks, queues, trees, graphs, sorting algorithms, and complexity analysis.</div><span class="c-area">Programming</span></div>
+    <div class="course-card reveal"><div class="c-code">ENSC 225</div><div class="c-name">Microelectronics I</div><div class="c-desc">Diodes, BJTs, MOSFETs, amplifier design, and analog circuit analysis.</div><span class="c-area">Electronics</span></div>
+    <div class="course-card reveal"><div class="c-code">ENSC 254</div><div class="c-name">Introduction to Computer Organization</div><div class="c-desc">RISC-V architecture, memory hierarchy, pipelining, caches, and computer organization.</div><span class="c-area">Architecture</span></div>
+    <div class="course-card reveal"><div class="c-code">ENSC 280</div><div class="c-name">Engineering Measurement</div><div class="c-desc">Measurement systems, sensors, signal conditioning, data acquisition, and uncertainty analysis.</div><span class="c-area">Measurement</span></div>
+    <!-- 2025 Fall -->
+    <div class="course-card reveal"><div class="c-code">CMPT 276</div><div class="c-name">Introduction to Software Engineering</div><div class="c-desc">Agile development, design patterns, testing strategies, and software project management.</div><span class="c-area">Software Eng</span></div>
+    <div class="course-card reveal"><div class="c-code">ENSC 324</div><div class="c-name">Electronic Devices</div><div class="c-desc">Semiconductor physics, p-n junctions, BJTs, MOSFETs, and device modeling.</div><span class="c-area">Electronics</span></div>
+    <div class="course-card reveal"><div class="c-code">ENSC 351</div><div class="c-name">Embedded & Real-Time System Software</div><div class="c-desc">Embedded programming, real-time OS concepts, scheduling, and hardware-software interfacing.</div><span class="c-area">Embedded</span></div>
+    <div class="course-card reveal"><div class="c-code">ENSC 380</div><div class="c-name">Linear Systems</div><div class="c-desc">Signals, Laplace and Fourier transforms, frequency response, and system modeling.</div><span class="c-area">Systems</span></div>
+    <!-- 2026 Spring (In Progress) -->
+    <div class="course-card reveal"><div class="c-code">ARCH 131</div><div class="c-name">Human Origins</div><div class="c-desc">Anthropological exploration of human evolution, prehistory, and cultural development.</div><span class="c-area">In Progress</span></div>
+    <div class="course-card reveal"><div class="c-code">CMPT 310</div><div class="c-name">Introduction to Artificial Intelligence</div><div class="c-desc">Search algorithms, knowledge representation, machine learning, and AI problem-solving.</div><span class="c-area">In Progress</span></div>
+    <div class="course-card reveal"><div class="c-code">ENSC 327</div><div class="c-name">Communication Systems</div><div class="c-desc">Analog and digital modulation, noise analysis, and communication system design.</div><span class="c-area">In Progress</span></div>
+    <div class="course-card reveal"><div class="c-code">ENSC 350</div><div class="c-name">Digital Systems Design</div><div class="c-desc">Advanced digital design, FPGAs, HDL programming, and system-on-chip concepts.</div><span class="c-area">In Progress</span></div>
   </div>
 </div>
 
 <div class="divider"></div>
 
-<!-- LEADERSHIP -->
-<div id="leadership" class="wrap" style="padding-bottom: 0;">
-  <div class="sh reveal"><span class="sh-num">05</span><h2 class="sh-title">Leadership</h2><div class="sh-line"></div></div>
+<div id="leadership" class="wrap">
+  <div class="sh reveal"><span class="sh-num">06</span><h2 class="sh-title">Leadership</h2><div class="sh-line"></div></div>
   <div class="lead-grid">
     <div class="lead-card reveal">
       <div class="lead-icon-wrap">🏛</div>
-      <div class="lead-role">Associate VP External</div>
+      <div class="lead-role">Associate VP External & Community Affairs</div>
       <div class="lead-org">Simon Fraser Student Society · Jul 2025 – Present</div>
-      <div class="lead-desc">Advocating for SFU students at municipal, provincial, and federal levels. Secured BC Ferries sponsorship through strategic coalition-building and outreach planning.</div>
+      <div class="lead-desc">Supporting the VP External in representing SFU students at municipal, provincial, and federal levels. Builds relationships with external organizations, community partners, and government bodies. Collaborates on outreach initiatives, advocacy campaigns, and coalition-building to advance social justice, affordability, and equity-based policies for the student body.</div>
+    </div>
+    <div class="lead-card reveal">
+      <div class="lead-icon-wrap">🤖</div>
+      <div class="lead-role">Software Developer — Path Planning</div>
+      <div class="lead-org">SFU Robot Soccer (SFURS) · Sept 2025 – Present</div>
+      <div class="lead-desc">Developing C++ collision avoidance and velocity planning algorithms for autonomous robot navigation. Designs modular interfaces with documentation for cross-functional team integration, collaborating in agile sprints with software and hardware teams.</div>
     </div>
     <div class="lead-card reveal">
       <div class="lead-icon-wrap">🤖</div>
       <div class="lead-role">Director of Outreach</div>
-      <div class="lead-org">SFU Robot Soccer · Sept 2024 – Jan 2025</div>
-      <div class="lead-desc">Organized robotics workshops for 50+ high school students showcasing hardware/software integration and inspiring the next generation of STEM professionals.</div>
+      <div class="lead-org">SFU Robot Soccer (SFURS) · Sept 2024 – Jan 2025</div>
+      <div class="lead-desc">Organized outreach events at SFU engaging 50+ high school students with robotics demonstrations and career discussions, encouraging students to pursue STEM, software, hardware, and robotics career paths.</div>
     </div>
-    <div class="lead-card reveal">
-      <div class="lead-icon-wrap">📡</div>
-      <div class="lead-role">Peer Tutor — ENSC 252</div>
-      <div class="lead-org">ESSS · May 2025 – Present</div>
-      <div class="lead-desc">One-on-one support in circuit theory and digital logic, helping students build confidence and succeed in foundational engineering science coursework.</div>
-    </div>
+ 
     <div class="lead-card reveal">
       <div class="lead-icon-wrap">⚡</div>
       <div class="lead-role">Director of Spirit</div>
       <div class="lead-org">ESSS · Oct 2023 – May 2024</div>
-      <div class="lead-desc">Fostered community and school spirit within the Engineering Science Student Society through creative events and student engagement initiatives.</div>
+      <div class="lead-desc">Fostered community and school spirit within the Engineering Science Student Society through creative events and student engagement initiatives across the Burnaby campus.</div>
     </div>
   </div>
+</div>
 
-
-<!-- CONTACT -->
 <div id="contact-section">
   <div class="contact-inner">
     <div class="c-title">LET'S BUILD<br><span>SOMETHING.</span></div>
     <p class="c-sub">Open to internships, research, and collaborations in robotics, embedded systems, or full-stack development. Based in Surrey, BC.</p>
     <div class="c-grid">
-      <a href="mailto:maa222@sfu.ca" class="c-item">
-        <span class="c-item-label">Email</span>
-        <span class="c-item-val">maa222@sfu.ca</span>
-      </a>
-      <a href="https://www.linkedin.com/in/manya-asri-51bb8628b/" target="_blank" class="c-item">
-        <span class="c-item-label">LinkedIn</span>
-        <span class="c-item-val">manya-asri</span>
-      </a>
-      <a href="https://github.com/manyaasri" target="_blank" class="c-item">
-        <span class="c-item-label">GitHub</span>
-        <span class="c-item-val">manyaasri9</span>
-      </a>
+  
+      <a href="https://www.linkedin.com/in/manya-asri-51bb8628b/" target="_blank" class="c-item"><span class="c-item-label">LinkedIn</span><span class="c-item-val">manya-asri</span></a>
+      <a href="https://github.com/manyaasri9" target="_blank" class="c-item"><span class="c-item-label">GitHub</span><span class="c-item-val">manyaasri9</span></a>
     </div>
   </div>
 </div>
 
 <footer>
-  <span>© 2026 MANYA ASRI BC, Canada</span>
-  <span>SFU ENGINEERING SCIENCE · <a href="mailto:maa222@sfu.ca">maa222@sfu.ca</a></span>
-</footer>
-
-<script>
-const obs = new IntersectionObserver(entries => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) setTimeout(() => e.target.classList.add('on'), i * 60);
-  });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script>
-</body>
-</html>
+  <span>© 2026 MANYA ASRI · BC, Canada</span>
+  <span>SFU ENGINEERING SCIENCE </span>
